@@ -1,0 +1,49 @@
+
+#menu {
+    position: relative;
+    margin: 10px;
+    height: 0;
+    width: 50px;
+
+    border: none;
+    padding: 0;
+
+    content: none;
+
+    border-color: #D84282;
+    border-top-width: 20px;
+    border-top-style: double;
+
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+
+}
+
+#menu::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -22px;
+    width: 0;
+    font-size: xx-large;
+    color: lightyellow;
+    height: 36px;
+    background-color: #D84282;
+    transition: width .35s ease-in-out;
+    transition: background-color 2s ease-in-out;
+    transition: color 4s ease-in-out;
+}
+
+#menu:hover::after {
+    width: 100vw;
+    text-align: center;
+    content: "Na regen komt zonneschijn en dan weer regen";
+    background-color: lightyellow;
+    color: black;
+}
+
+
+.hamburger { position: relative; width: 5em; height: 0.5em; background-color: #d84282; margin-top: 50px; }
+.hamburger::before { position: absolute; content: ""; display: block; width: 5em; height: 0.5em; background-color: #d84282; top: -1.2em; bottom: 0; }
+.hamburger::after { position: absolute; content: ""; display: block; width: 5em; height: 0.5em; background-color: #d84282; top: 1.2em; left: 0; }
